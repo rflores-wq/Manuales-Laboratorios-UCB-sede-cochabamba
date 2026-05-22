@@ -6,94 +6,155 @@
 <title>Manuales de Laboratorio — UCB San Pablo 2026</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',system-ui,sans-serif}
-body{background:#f5f5f3;color:#1a1a18;min-height:100vh;padding:2rem 1rem}
-.container{max-width:1100px;margin:0 auto}
-.header{margin-bottom:1.5rem}
-.ucb-badge{display:inline-block;background:#003087;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;margin-bottom:10px;letter-spacing:0.5px}
-.header h1{font-size:20px;font-weight:600;color:#1a1a18;margin-bottom:4px}
-.header p{font-size:13px;color:#666}
-.card{background:#fff;border-radius:12px;border:0.5px solid #e0dfd6;padding:1.25rem;margin-bottom:1rem}
-.tabs{display:flex;border-bottom:1.5px solid #ddd;margin-bottom:1.25rem}
-.tab-btn{padding:10px 20px;font-size:13.5px;font-weight:500;border:none;background:transparent;cursor:pointer;color:#888;border-bottom:2.5px solid transparent;margin-bottom:-1.5px}
-.tab-btn.active{color:#1a1a18;border-bottom:2.5px solid #1a1a18}
-.tab-btn:hover:not(.active){color:#1a1a18}
+body{background:#f0f2f5;color:#1a1a18;min-height:100vh}
+
+/* HEADER INSTITUCIONAL */
+.inst-header{background:linear-gradient(135deg,#002570 0%,#003087 60%,#004aad 100%);padding:0;box-shadow:0 4px 20px rgba(0,48,135,0.3)}
+.inst-header-inner{max-width:1100px;margin:0 auto;padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1.5rem}
+.logo-circle{width:72px;height:72px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.2);overflow:hidden;border:3px solid #C8A951}
+.logo-circle img{width:64px;height:64px;object-fit:contain}
+.inst-divider{width:2px;height:60px;background:rgba(200,169,81,0.5);flex-shrink:0}
+.inst-text h1{font-size:13px;color:rgba(255,255,255,0.75);font-weight:400;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+.inst-text h2{font-size:20px;color:#fff;font-weight:700;margin-bottom:2px;letter-spacing:0.3px}
+.inst-text p{font-size:12px;color:rgba(200,169,81,0.9);font-weight:500;letter-spacing:0.5px}
+.gold-bar{height:4px;background:linear-gradient(90deg,#C8A951,#e8c96a,#C8A951)}
+
+/* CONTENIDO */
+.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 2rem}
+
+/* TABS */
+.card{background:#fff;border-radius:14px;border:none;box-shadow:0 2px 12px rgba(0,48,135,0.08);overflow:hidden}
+.tabs{display:flex;background:#f8f9fc;border-bottom:2px solid #e8eaf2}
+.tab-btn{padding:13px 24px;font-size:13.5px;font-weight:600;border:none;background:transparent;cursor:pointer;color:#888;border-bottom:3px solid transparent;margin-bottom:-2px;display:flex;align-items:center;gap:7px;transition:all 0.2s}
+.tab-btn.active{color:#003087;border-bottom:3px solid #003087;background:#fff}
+.tab-btn:hover:not(.active){color:#003087;background:rgba(0,48,135,0.04)}
+.tab-icon{font-size:16px}
+
+/* SEARCH */
+.search-area{padding:1.25rem 1.25rem 0}
 .search-row{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
 .sbox{flex:1;min-width:200px;position:relative}
-.sbox svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);opacity:0.4;pointer-events:none}
-.sbox input{width:100%;padding:9px 12px 9px 34px;font-size:13px;border:1px solid #ddd;border-radius:8px;background:#fafaf8;color:#1a1a18;outline:none}
-.sbox input:focus{border-color:#888}
-select{padding:8px 12px;font-size:13px;border:1px solid #ddd;border-radius:8px;background:#fafaf8;color:#1a1a18;cursor:pointer;outline:none}
-.clear-btn{padding:8px 14px;font-size:12px;color:#888;border:1px solid #ddd;border-radius:8px;background:#fff;cursor:pointer}
-.clear-btn:hover{background:#f5f5f3}
-.reload-btn{padding:8px 14px;font-size:12px;color:#003087;border:1px solid #003087;border-radius:8px;background:#fff;cursor:pointer;font-weight:500}
-.reload-btn:hover{background:#eef2ff}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1rem}
-.stat{background:#f5f5f3;border-radius:8px;padding:10px 14px}
-.stat-val{font-size:22px;font-weight:600;color:#1a1a18}
-.stat-lbl{font-size:11px;color:#888;margin-top:2px}
-.table-wrap{border-radius:10px;border:0.5px solid #e0dfd6;overflow:hidden}
+.sbox svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:#003087;opacity:0.5;pointer-events:none}
+.sbox input{width:100%;padding:10px 12px 10px 36px;font-size:13px;border:1.5px solid #dde2f0;border-radius:9px;background:#f8f9fc;color:#1a1a18;outline:none;transition:border 0.2s}
+.sbox input:focus{border-color:#003087;background:#fff}
+select{padding:9px 12px;font-size:13px;border:1.5px solid #dde2f0;border-radius:9px;background:#f8f9fc;color:#1a1a18;cursor:pointer;outline:none}
+select:focus{border-color:#003087}
+.clear-btn{padding:9px 14px;font-size:12px;color:#666;border:1.5px solid #dde2f0;border-radius:9px;background:#fff;cursor:pointer;font-weight:500}
+.clear-btn:hover{background:#f0f2f5;border-color:#bbb}
+.reload-btn{padding:9px 16px;font-size:12px;color:#fff;border:none;border-radius:9px;background:#003087;cursor:pointer;font-weight:600;display:flex;align-items:center;gap:5px}
+.reload-btn:hover{background:#002570}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:1rem 1.25rem}
+.stat{background:linear-gradient(135deg,#f0f4ff,#e8edf8);border-radius:10px;padding:12px 16px;border-left:4px solid #003087}
+.stat-val{font-size:24px;font-weight:700;color:#003087}
+.stat-lbl{font-size:11px;color:#667;margin-top:2px;font-weight:500}
+.stat.gold{background:linear-gradient(135deg,#fdf8ec,#f5edd4);border-left:4px solid #C8A951}
+.stat.gold .stat-val{color:#8a6d00}
+
+/* TABLE */
+.table-wrap{margin:0 1.25rem 1.25rem;border-radius:10px;border:1.5px solid #e8eaf2;overflow:hidden}
 table{width:100%;border-collapse:collapse;font-size:12.5px;table-layout:fixed}
-thead th{background:#f5f5f3;padding:10px 14px;text-align:left;font-weight:600;font-size:11px;color:#666;border-bottom:0.5px solid #e0dfd6;cursor:pointer;user-select:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-thead th:hover{color:#1a1a18}
-tbody tr{border-bottom:0.5px solid #f0efe8}
+thead{background:linear-gradient(135deg,#002570,#003087)}
+thead th{padding:11px 14px;text-align:left;font-weight:600;font-size:11px;color:rgba(255,255,255,0.85);cursor:pointer;user-select:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0.3px}
+thead th:hover{color:#C8A951}
+thead th.active-sort{color:#C8A951}
+tbody tr{border-bottom:1px solid #f0f2f8}
 tbody tr:last-child{border-bottom:none}
-tbody tr:hover{background:#fafaf8}
+tbody tr:hover{background:#f4f7ff}
 tbody td{padding:10px 14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10.5px;font-weight:600}
-.b-bio{background:#d1fae5;color:#065f46}.b-inv{background:#dbeafe;color:#1e40af}
-.b-fis{background:#ede9fe;color:#4c1d95}.b-ele{background:#fef3c7;color:#92400e}
+
+/* BADGES LABORATORIO */
+.badge{display:inline-block;padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;letter-spacing:0.2px}
+.b-bio{background:#d1fae5;color:#065f46}.b-inv{background:#dbeafe;color:#1e3a8a}
+.b-fis{background:#ede9fe;color:#4c1d95}.b-ele{background:#fef3c7;color:#78350f}
 .b-ana{background:#fee2e2;color:#991b1b}.b-3d{background:#fce7f3;color:#831843}
-.b-mic{background:#d1fae5;color:#065f46}.b-ali{background:#f3f4f6;color:#374151}
-.b-mec{background:#fecaca;color:#7f1d1d}.b-pro{background:#bfdbfe;color:#1e3a8a}
-.link-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;font-size:11px;border:1px solid #ddd;border-radius:6px;background:#f0f9ff;color:#0369a1;text-decoration:none;font-weight:500}
-.link-btn:hover{background:#e0f2fe}
-.no-link{font-size:11px;color:#bbb}
-.loading{text-align:center;padding:3rem;color:#888;font-size:14px}
-.error-msg{text-align:center;padding:2rem;color:#991b1b;font-size:13px;background:#fee2e2;border-radius:8px;margin:1rem 0}
+.b-mic{background:#ccfbf1;color:#134e4a}.b-ali{background:#f0fdf4;color:#166534}
+.b-mec{background:#fecaca;color:#7f1d1d}.b-pro{background:#e0f2fe;color:#075985}
+
+/* ENLACE */
+.link-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;font-size:11px;border:1.5px solid #003087;border-radius:7px;background:#fff;color:#003087;text-decoration:none;font-weight:600;transition:all 0.15s}
+.link-btn:hover{background:#003087;color:#fff}
+.no-link{font-size:11px;color:#bbb;font-style:italic}
+
+/* ESTADO */
+.loading{text-align:center;padding:3.5rem;color:#888;font-size:14px}
+.spinner{display:inline-block;width:28px;height:28px;border:3px solid #e0e4f0;border-top:3px solid #003087;border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:12px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error-msg{margin:1rem 1.25rem;padding:1rem 1.25rem;color:#991b1b;font-size:13px;background:#fee2e2;border-radius:10px;border-left:4px solid #991b1b}
 .empty{text-align:center;padding:3rem;color:#888;font-size:14px}
-.pag-bar{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#f5f5f3;border-top:0.5px solid #e0dfd6;font-size:12px;color:#888;flex-wrap:wrap;gap:8px}
+
+/* PAGINACIÓN */
+.pag-bar{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#f8f9fc;border-top:1.5px solid #e8eaf2;font-size:12px;color:#888;flex-wrap:wrap;gap:8px}
 .pag-btns{display:flex;gap:4px}
-.pb{padding:4px 9px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer;font-size:12px;color:#1a1a18}
-.pb:hover:not(:disabled){background:#f5f5f3}
-.pb:disabled{opacity:0.35;cursor:default}
-.pb.on{font-weight:600;border-color:#888}
-.last-update{font-size:11px;color:#aaa;margin-top:6px}
+.pb{padding:5px 10px;border:1.5px solid #dde2f0;border-radius:7px;background:#fff;cursor:pointer;font-size:12px;color:#003087;font-weight:500}
+.pb:hover:not(:disabled){background:#003087;color:#fff;border-color:#003087}
+.pb:disabled{opacity:0.3;cursor:default}
+.pb.on{background:#003087;color:#fff;border-color:#003087}
+
+/* FOOTER */
+.footer{text-align:center;padding:1.2rem;font-size:11px;color:#999;margin-top:0.5rem}
+.footer span{color:#C8A951;font-weight:600}
+.last-update{font-size:11px;color:#aaa;padding:0 1.25rem 1rem;text-align:right}
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="header">
-    <div class="ucb-badge">UCB San Pablo · Cochabamba</div>
-    <h1>Sistema de Manuales de Laboratorio 2026</h1>
-    <p>Fuente de consulta para docentes, investigadores y estudiantes · datos en tiempo real desde Google Sheets</p>
-  </div>
 
+<!-- HEADER INSTITUCIONAL -->
+<div class="inst-header">
+  <div class="inst-header-inner">
+    <div class="logo-circle">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Escudo_UCB.png/240px-Escudo_UCB.png" 
+           alt="Escudo UCB"
+           onerror="this.style.display='none';this.parentNode.innerHTML='<span style=font-size:28px;color:#003087>✟</span>'">
+    </div>
+    <div class="inst-divider"></div>
+    <div class="inst-text">
+      <h1>Universidad Católica Boliviana</h1>
+      <h2>Sistema de Manuales de Laboratorio</h2>
+      <p>Sede San Pablo · Cochabamba · 2026</p>
+    </div>
+  </div>
+</div>
+<div class="gold-bar"></div>
+
+<div class="container">
   <div class="card">
     <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('fis',this)">📚 Manuales físicos</button>
-      <button class="tab-btn" onclick="switchTab('dig',this)">💻 Manuales digitales</button>
+      <button class="tab-btn active" onclick="switchTab('fis',this)">
+        <span class="tab-icon">📚</span> Manuales Físicos
+      </button>
+      <button class="tab-btn" onclick="switchTab('dig',this)">
+        <span class="tab-icon">💻</span> Manuales Digitales
+      </button>
     </div>
 
-    <div class="search-row">
-      <div class="sbox">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="text" id="q" placeholder="Buscar por código, equipo, nombre del manual, marca..." oninput="render()">
+    <div class="search-area">
+      <div class="search-row">
+        <div class="sbox">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="q" placeholder="Buscar por código, equipo, nombre del manual, marca...">
+        </div>
+        <select id="f-lab"><option value="">Todos los laboratorios</option></select>
+        <button class="clear-btn" onclick="clearF()">✕ Limpiar</button>
+        <button class="reload-btn" onclick="loadData()">↻ Actualizar</button>
       </div>
-      <select id="f-lab" onchange="render()"><option value="">Todos los laboratorios</option></select>
-      <button class="clear-btn" onclick="clearF()">✕ Limpiar</button>
-      <button class="reload-btn" onclick="loadData(true)">↻ Actualizar datos</button>
     </div>
 
     <div class="stats">
-      <div class="stat"><div class="stat-val" id="s-total">—</div><div class="stat-lbl">resultados</div></div>
-      <div class="stat"><div class="stat-val" id="s-labs">—</div><div class="stat-lbl">laboratorios</div></div>
-      <div class="stat"><div class="stat-val" id="s-extra">—</div><div class="stat-lbl" id="s-extra-lbl">manuales</div></div>
+      <div class="stat"><div class="stat-val" id="s-total">—</div><div class="stat-lbl">Resultados encontrados</div></div>
+      <div class="stat"><div class="stat-val" id="s-labs">—</div><div class="stat-lbl">Laboratorios</div></div>
+      <div class="stat gold"><div class="stat-val" id="s-extra">—</div><div class="stat-lbl" id="s-extra-lbl">Manuales</div></div>
     </div>
 
     <div id="main-area">
-      <div class="loading">⏳ Cargando datos desde Google Sheets...</div>
+      <div class="loading"><div class="spinner"></div><br>Cargando datos desde Google Sheets...</div>
     </div>
     <div class="last-update">Última actualización: <span id="last-upd">—</span></div>
+  </div>
+
+  <div class="footer">
+    Oficina de Investigación Tupuraya II · <span>UCB San Pablo Cochabamba</span> · 2026
   </div>
 </div>
 
@@ -101,112 +162,77 @@ tbody td{padding:10px 14px;overflow:hidden;text-overflow:ellipsis;white-space:no
 const URL_FIS = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzpqmRkFyP0mcNo6BWZdkovOV-s4OgeL_FhsYvpRrMWelfwF8UMpNh-eCnybunnppe6MirYUJZIZon/pub?output=csv&gid=135612474";
 const URL_DIG = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzpqmRkFyP0mcNo6BWZdkovOV-s4OgeL_FhsYvpRrMWelfwF8UMpNh-eCnybunnppe6MirYUJZIZon/pub?output=csv&gid=275856402";
 const LABS_COLOR = {'Biotecnologia':'b-bio','Investigacion':'b-inv','Fisica':'b-fis','Electronica':'b-ele','Analitica':'b-ana','3D y Prototipado':'b-3d','Microscopia':'b-mic','Alimentos':'b-ali','Mecanizado y Manufactura':'b-mec','Procesos y Hidraulica':'b-pro'};
+let DATA={'fis':[],'dig':[]}, curTab='fis', filtered=[], sKey='', sDir=1, pg=1, perPg=12;
 
-let DATA = {'fis':[], 'dig':[]};
-let curTab='fis', filtered=[], sKey='', sDir=1, pg=1, perPg=12;
+document.getElementById('q').addEventListener('input', render);
 
 function parseCSV(text){
-  const lines = text.split('\n').map(l=>l.trim()).filter(l=>l);
-  let headerIdx = -1;
-  for(let i=0;i<lines.length;i++){
-    if(lines[i].includes('Código') || lines[i].includes('Codigo')){ headerIdx=i; break; }
-  }
-  if(headerIdx<0) return [];
-  const headers = splitCSVLine(lines[headerIdx]).map(h=>h.trim().replace(/"/g,''));
-  const rows = [];
-  for(let i=headerIdx+1;i<lines.length;i++){
-    const vals = splitCSVLine(lines[i]).map(v=>v.trim().replace(/^"|"$/g,''));
-    if(!vals[1]) continue;
-    const obj = {};
-    headers.forEach((h,idx)=>obj[h]=vals[idx]||'');
-    rows.push({
-      codigo: obj['Código']||obj['Codigo']||'',
-      laboratorio: obj['Laboratorio']||'',
-      marca: obj['Marca']||'',
-      nombre: obj['Nombre del Manual']||obj['Nombre']||'',
-      equipo: obj['Equipo (Nombre Completo)']||obj['Equipo']||'',
-      enlace: obj['Enlace Drive']||'',
-      descripcion: obj['Descripción del Equipo']||obj['Descripcion']||''
-    });
-  }
-  return rows;
+  const lines=text.split('\n').map(l=>l.trim()).filter(l=>l);
+  let hi=-1;
+  for(let i=0;i<lines.length;i++){if(lines[i].includes('Código')||lines[i].includes('Codigo')){hi=i;break;}}
+  if(hi<0)return[];
+  const headers=splitCSV(lines[hi]).map(h=>h.replace(/"/g,'').trim());
+  return lines.slice(hi+1).map(l=>{
+    const v=splitCSV(l).map(x=>x.replace(/^"|"$/g,'').trim());
+    if(!v[1])return null;
+    const o={};headers.forEach((h,i)=>o[h]=v[i]||'');
+    return{codigo:o['Código']||o['Codigo']||'',laboratorio:o['Laboratorio']||'',marca:o['Marca']||'',nombre:o['Nombre del Manual']||o['Nombre']||'',equipo:o['Equipo (Nombre Completo)']||o['Equipo']||'',enlace:o['Enlace Drive']||'',descripcion:o['Descripción del Equipo']||o['Descripcion']||''};
+  }).filter(Boolean);
 }
 
-function splitCSVLine(line){
-  const result=[]; let cur='', inQ=false;
-  for(let i=0;i<line.length;i++){
-    const c=line[i];
-    if(c==='"'){ inQ=!inQ; }
-    else if(c===',' && !inQ){ result.push(cur); cur=''; }
-    else{ cur+=c; }
-  }
-  result.push(cur);
-  return result;
+function splitCSV(line){
+  const r=[];let cur='',inQ=false;
+  for(const c of line){if(c==='"')inQ=!inQ;else if(c===','&&!inQ){r.push(cur);cur='';}else cur+=c;}
+  r.push(cur);return r;
 }
 
-async function loadData(force=false){
-  const area = document.getElementById('main-area');
-  area.innerHTML = '<div class="loading">⏳ Cargando datos desde Google Sheets...</div>';
+async function loadData(){
+  document.getElementById('main-area').innerHTML='<div class="loading"><div class="spinner"></div><br>Cargando datos desde Google Sheets...</div>';
   try{
-    const [resFis, resDig] = await Promise.all([
-      fetch(URL_FIS + '&t=' + Date.now()),
-      fetch(URL_DIG + '&t=' + Date.now())
-    ]);
-    if(!resFis.ok || !resDig.ok) throw new Error('Error al obtener datos');
-    const [textFis, textDig] = await Promise.all([resFis.text(), resDig.text()]);
-    DATA.fis = parseCSV(textFis);
-    DATA.dig = parseCSV(textDig);
-    document.getElementById('last-upd').textContent = new Date().toLocaleString('es-BO');
-    buildTable();
-    buildLabs();
-    render();
-  } catch(e){
-    area.innerHTML = `<div class="error-msg">⚠️ No se pudieron cargar los datos desde Google Sheets.<br><small>${e.message}</small><br><br><button class="reload-btn" onclick="loadData(true)" style="margin-top:8px">↻ Reintentar</button></div>`;
+    const [rF,rD]=await Promise.all([fetch(URL_FIS+'&t='+Date.now()),fetch(URL_DIG+'&t='+Date.now())]);
+    if(!rF.ok||!rD.ok)throw new Error('Error de red');
+    const [tF,tD]=await Promise.all([rF.text(),rD.text()]);
+    DATA.fis=parseCSV(tF); DATA.dig=parseCSV(tD);
+    document.getElementById('last-upd').textContent=new Date().toLocaleString('es-BO');
+    buildTable(); buildLabs(); render();
+  }catch(e){
+    document.getElementById('main-area').innerHTML=`<div class="error-msg">⚠️ No se pudieron cargar los datos.<br><small>${e.message}</small><br><br><button class="reload-btn" onclick="loadData()" style="margin-top:8px">↻ Reintentar</button></div>`;
   }
 }
 
 function buildTable(){
-  const isFis = curTab==='fis';
-  const cols = isFis
-    ? `<th style="width:13%" onclick="sortBy('codigo')">Código</th><th style="width:18%" onclick="sortBy('laboratorio')">Laboratorio</th><th style="width:12%" onclick="sortBy('marca')">Marca</th><th style="width:30%" onclick="sortBy('nombre')">Nombre del manual</th><th style="width:27%" onclick="sortBy('equipo')">Equipo</th>`
-    : `<th style="width:13%" onclick="sortBy('codigo')">Código</th><th style="width:16%" onclick="sortBy('laboratorio')">Laboratorio</th><th style="width:11%" onclick="sortBy('marca')">Marca</th><th style="width:26%" onclick="sortBy('nombre')">Nombre del manual</th><th style="width:21%" onclick="sortBy('equipo')">Equipo</th><th style="width:13%">Enlace Drive</th>`;
-  document.getElementById('main-area').innerHTML = `
+  const isFis=curTab==='fis';
+  const cols=isFis
+    ?`<th style="width:13%" onclick="sortBy('codigo')">Código</th><th style="width:18%" onclick="sortBy('laboratorio')">Laboratorio</th><th style="width:12%" onclick="sortBy('marca')">Marca</th><th style="width:30%" onclick="sortBy('nombre')">Nombre del manual</th><th style="width:27%" onclick="sortBy('equipo')">Equipo</th>`
+    :`<th style="width:13%" onclick="sortBy('codigo')">Código</th><th style="width:16%" onclick="sortBy('laboratorio')">Laboratorio</th><th style="width:11%" onclick="sortBy('marca')">Marca</th><th style="width:25%" onclick="sortBy('nombre')">Nombre del manual</th><th style="width:21%" onclick="sortBy('equipo')">Equipo</th><th style="width:14%">Enlace Drive</th>`;
+  document.getElementById('main-area').innerHTML=`
     <div class="table-wrap">
-      <table><thead><tr>${cols}</tr></thead><tbody id="tbody"></tbody></table>
-      <div class="pag-bar">
-        <span id="pag-info"></span>
-        <div class="pag-btns" id="pag-btns"></div>
-      </div>
+      <table><thead><tr id="thead-row">${cols}</tr></thead><tbody id="tbody"></tbody></table>
+      <div class="pag-bar"><span id="pag-info"></span><div class="pag-btns" id="pag-btns"></div></div>
     </div>`;
 }
 
 function buildLabs(){
-  const data = DATA[curTab];
-  const labs = [...new Set(data.map(r=>r.laboratorio).filter(Boolean))].sort();
-  const sel = document.getElementById('f-lab');
+  const labs=[...new Set(DATA[curTab].map(r=>r.laboratorio).filter(Boolean))].sort();
+  const sel=document.getElementById('f-lab');
   sel.innerHTML='<option value="">Todos los laboratorios</option>'+labs.map(l=>`<option>${l}</option>`).join('');
 }
 
-function switchTab(t, btn){
-  curTab=t; pg=1; sKey=''; sDir=1;
+function switchTab(t,btn){
+  curTab=t;pg=1;sKey='';sDir=1;
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  clearF(false);
-  buildTable();
-  buildLabs();
-  render();
+  clearF(false);buildTable();buildLabs();render();
 }
 
 function clearF(r=true){document.getElementById('q').value='';document.getElementById('f-lab').value='';pg=1;if(r)render();}
-function sortBy(k){if(sKey===k)sDir*=-1;else{sKey=k;sDir=1;}render();}
+function sortBy(k){sKey===k?sDir*=-1:(sKey=k,sDir=1);render();}
 
 function render(){
-  const tb = document.getElementById('tbody');
-  if(!tb) return;
-  const data = DATA[curTab];
+  const tb=document.getElementById('tbody');if(!tb)return;
   const q=(document.getElementById('q').value||'').toLowerCase().trim();
   const fLab=document.getElementById('f-lab').value;
-  filtered=data.filter(r=>{
+  filtered=DATA[curTab].filter(r=>{
     if(fLab&&r.laboratorio!==fLab)return false;
     if(q){const h=[r.codigo,r.laboratorio,r.marca,r.nombre,r.equipo,r.descripcion].join(' ').toLowerCase();if(!h.includes(q))return false;}
     return true;
@@ -218,48 +244,44 @@ function render(){
   if(curTab==='dig'){
     const cl=filtered.filter(r=>r.enlace&&r.enlace.startsWith('http')).length;
     document.getElementById('s-extra').textContent=cl;
-    document.getElementById('s-extra-lbl').textContent='con enlace Drive';
-  }else{
-    document.getElementById('s-extra').textContent=filtered.length;
-    document.getElementById('s-extra-lbl').textContent='físicos registrados';
-  }
+    document.getElementById('s-extra-lbl').textContent='Con enlace Drive';
+  }else{document.getElementById('s-extra').textContent=filtered.length;document.getElementById('s-extra-lbl').textContent='Físicos registrados';}
+  
+  // Update sort headers
+  document.querySelectorAll('#thead-row th').forEach(th=>{
+    const fn=th.getAttribute('onclick');if(!fn)return;
+    const k=fn.match(/'(\w+)'/)?.[1];if(!k)return;
+    const base={codigo:'Código',laboratorio:'Laboratorio',marca:'Marca',nombre:'Nombre del manual',equipo:'Equipo'}[k]||k;
+    th.textContent=base+(sKey===k?(sDir===1?' ▲':' ▼'):' ⇅');
+    th.classList.toggle('active-sort',sKey===k);
+  });
+
   const pages=Math.max(1,Math.ceil(filtered.length/perPg));
   if(pg>pages)pg=1;
   const slice=filtered.slice((pg-1)*perPg,pg*perPg);
   const isFis=curTab==='fis';
-  if(!slice.length){tb.innerHTML=`<tr><td colspan="${isFis?5:6}" class="empty">Sin resultados para esta búsqueda</td></tr>`;renderPag(pages);return;}
+  if(!slice.length){tb.innerHTML=`<tr><td colspan="${isFis?5:6}" class="empty">🔍 Sin resultados para esta búsqueda</td></tr>`;renderPag(pages);return;}
   tb.innerHTML=slice.map(r=>{
     const bc=LABS_COLOR[r.laboratorio]||'b-ali';
-    const si=k=>sKey===k?(sDir===1?' ▲':' ▼'):' ⇅';
-    const base=`<td title="${r.codigo}" style="font-weight:600;font-size:11.5px">${r.codigo}</td><td><span class="badge ${bc}">${r.laboratorio}</span></td><td title="${r.marca}" style="color:#666">${r.marca}</td><td title="${r.nombre}">${r.nombre}</td><td title="${r.equipo}" style="color:#555">${r.equipo}</td>`;
-    if(isFis)return `<tr>${base}</tr>`;
+    const base=`<td title="${r.codigo}" style="font-weight:700;font-size:11.5px;color:#003087">${r.codigo}</td><td><span class="badge ${bc}">${r.laboratorio}</span></td><td title="${r.marca}" style="color:#666">${r.marca}</td><td title="${r.nombre}">${r.nombre}</td><td title="${r.equipo}" style="color:#555">${r.equipo}</td>`;
+    if(isFis)return`<tr>${base}</tr>`;
     const lc=r.enlace&&r.enlace.startsWith('http')?`<a href="${r.enlace}" class="link-btn" target="_blank">🔗 Ver PDF</a>`:`<span class="no-link">Pendiente</span>`;
-    return `<tr>${base}<td>${lc}</td></tr>`;
+    return`<tr>${base}<td>${lc}</td></tr>`;
   }).join('');
   renderPag(pages);
-  updateSortHeaders();
-}
-
-function updateSortHeaders(){
-  document.querySelectorAll('thead th').forEach(th=>{
-    const txt=th.textContent.replace(/[ ▲▼⇅]/g,'');
-    th.textContent=txt+(sKey&&th.onclick&&th.onclick.toString().includes(`'${sKey}'`)?(sDir===1?' ▲':' ▼'):' ⇅');
-  });
 }
 
 function renderPag(pages){
-  const pb=document.getElementById('pag-btns');
-  if(!pb)return;
-  const start=(pg-1)*perPg+1,end=Math.min(pg*perPg,filtered.length);
-  document.getElementById('pag-info').textContent=filtered.length?`${start}–${end} de ${filtered.length} resultados`:'';
-  let h=`<button class="pb" onclick="goPg(${pg-1})" ${pg===1?'disabled':''}>&#8249;</button>`;
-  for(let i=1;i<=pages;i++){if(pages>7&&i>2&&i<pages-1&&Math.abs(i-pg)>1){if(i===3||i===pages-2)h+='<span style="padding:4px 2px;color:#aaa">…</span>';continue;}h+=`<button class="pb ${i===pg?'on':''}" onclick="goPg(${i})">${i}</button>`;}
-  h+=`<button class="pb" onclick="goPg(${pg+1})" ${pg===pages?'disabled':''}>&#8250;</button>`;
+  const pb=document.getElementById('pag-btns');if(!pb)return;
+  const s=(pg-1)*perPg+1,e=Math.min(pg*perPg,filtered.length);
+  document.getElementById('pag-info').textContent=filtered.length?`${s}–${e} de ${filtered.length} resultados`:'';
+  let h=`<button class="pb" onclick="goPg(${pg-1})" ${pg===1?'disabled':''}>‹</button>`;
+  for(let i=1;i<=pages;i++){if(pages>7&&i>2&&i<pages-1&&Math.abs(i-pg)>1){if(i===3||i===pages-2)h+='<span style="padding:4px 3px;color:#aaa">…</span>';continue;}h+=`<button class="pb ${i===pg?'on':''}" onclick="goPg(${i})">${i}</button>`;}
+  h+=`<button class="pb" onclick="goPg(${pg+1})" ${pg===pages?'disabled':''}>›</button>`;
   pb.innerHTML=h;
 }
 
 function goPg(p){pg=p;render();}
-
 loadData();
 </script>
 </body>
