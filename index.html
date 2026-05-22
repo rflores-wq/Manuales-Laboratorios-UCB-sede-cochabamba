@@ -8,105 +8,100 @@
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',system-ui,sans-serif}
 body{background:#f0f2f5;color:#1a1a18;min-height:100vh}
 
-/* HEADER INSTITUCIONAL */
 .inst-header{background:linear-gradient(135deg,#002570 0%,#003087 60%,#004aad 100%);padding:0;box-shadow:0 4px 20px rgba(0,48,135,0.3)}
-.inst-header-inner{max-width:1100px;margin:0 auto;padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1.5rem}
-.logo-circle{width:72px;height:72px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.2);overflow:hidden;border:3px solid #C8A951}
-.logo-circle img{width:64px;height:64px;object-fit:contain}
-.inst-divider{width:2px;height:60px;background:rgba(200,169,81,0.5);flex-shrink:0}
-.inst-text h1{font-size:13px;color:rgba(255,255,255,0.75);font-weight:400;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
-.inst-text h2{font-size:20px;color:#fff;font-weight:700;margin-bottom:2px;letter-spacing:0.3px}
-.inst-text p{font-size:12px;color:rgba(200,169,81,0.9);font-weight:500;letter-spacing:0.5px}
+.inst-header-inner{max-width:1100px;margin:0 auto;padding:1rem 1.25rem;display:flex;align-items:center;gap:1.25rem}
+.logo-circle{width:64px;height:64px;min-width:64px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,0.2);overflow:hidden;border:3px solid #C8A951}
+.logo-circle img{width:56px;height:56px;object-fit:contain}
+.inst-divider{width:2px;height:50px;background:rgba(200,169,81,0.5);flex-shrink:0}
+.inst-text h1{font-size:11px;color:rgba(255,255,255,0.75);font-weight:400;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+.inst-text h2{font-size:17px;color:#fff;font-weight:700;margin-bottom:2px}
+.inst-text p{font-size:11px;color:rgba(200,169,81,0.9);font-weight:500}
 .gold-bar{height:4px;background:linear-gradient(90deg,#C8A951,#e8c96a,#C8A951)}
 
-/* CONTENIDO */
-.container{max-width:1100px;margin:0 auto;padding:1.5rem 1rem 2rem}
+.container{max-width:1100px;margin:0 auto;padding:1.25rem 0.75rem 2rem}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,48,135,0.08);overflow:hidden}
 
-/* TABS */
-.card{background:#fff;border-radius:14px;border:none;box-shadow:0 2px 12px rgba(0,48,135,0.08);overflow:hidden}
-.tabs{display:flex;background:#f8f9fc;border-bottom:2px solid #e8eaf2}
-.tab-btn{padding:13px 24px;font-size:13.5px;font-weight:600;border:none;background:transparent;cursor:pointer;color:#888;border-bottom:3px solid transparent;margin-bottom:-2px;display:flex;align-items:center;gap:7px;transition:all 0.2s}
+.tabs{display:flex;background:#f8f9fc;border-bottom:2px solid #e8eaf2;overflow-x:auto}
+.tab-btn{padding:12px 20px;font-size:13px;font-weight:600;border:none;background:transparent;cursor:pointer;color:#888;border-bottom:3px solid transparent;margin-bottom:-2px;display:flex;align-items:center;gap:6px;white-space:nowrap;transition:all 0.2s}
 .tab-btn.active{color:#003087;border-bottom:3px solid #003087;background:#fff}
-.tab-btn:hover:not(.active){color:#003087;background:rgba(0,48,135,0.04)}
-.tab-icon{font-size:16px}
+.tab-btn:hover:not(.active){color:#003087}
 
-/* SEARCH */
-.search-area{padding:1.25rem 1.25rem 0}
-.search-row{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
-.sbox{flex:1;min-width:200px;position:relative}
-.sbox svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:#003087;opacity:0.5;pointer-events:none}
-.sbox input{width:100%;padding:10px 12px 10px 36px;font-size:13px;border:1.5px solid #dde2f0;border-radius:9px;background:#f8f9fc;color:#1a1a18;outline:none;transition:border 0.2s}
+.search-area{padding:1rem 1rem 0}
+.search-row{display:flex;gap:7px;margin-bottom:8px;flex-wrap:wrap}
+.sbox{flex:1;min-width:160px;position:relative}
+.sbox svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:#003087;opacity:0.5;pointer-events:none}
+.sbox input{width:100%;padding:9px 10px 9px 34px;font-size:13px;border:1.5px solid #dde2f0;border-radius:9px;background:#f8f9fc;color:#1a1a18;outline:none}
 .sbox input:focus{border-color:#003087;background:#fff}
-select{padding:9px 12px;font-size:13px;border:1.5px solid #dde2f0;border-radius:9px;background:#f8f9fc;color:#1a1a18;cursor:pointer;outline:none}
-select:focus{border-color:#003087}
-.clear-btn{padding:9px 14px;font-size:12px;color:#666;border:1.5px solid #dde2f0;border-radius:9px;background:#fff;cursor:pointer;font-weight:500}
-.clear-btn:hover{background:#f0f2f5;border-color:#bbb}
-.reload-btn{padding:9px 16px;font-size:12px;color:#fff;border:none;border-radius:9px;background:#003087;cursor:pointer;font-weight:600;display:flex;align-items:center;gap:5px}
-.reload-btn:hover{background:#002570}
+select{padding:9px 10px;font-size:13px;border:1.5px solid #dde2f0;border-radius:9px;background:#f8f9fc;color:#1a1a18;cursor:pointer;outline:none;max-width:180px}
+.btn-row{display:flex;gap:7px}
+.clear-btn{padding:9px 12px;font-size:12px;color:#666;border:1.5px solid #dde2f0;border-radius:9px;background:#fff;cursor:pointer;font-weight:500;white-space:nowrap}
+.reload-btn{padding:9px 14px;font-size:12px;color:#fff;border:none;border-radius:9px;background:#003087;cursor:pointer;font-weight:600;white-space:nowrap}
 
-/* STATS */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:1rem 1.25rem}
-.stat{background:linear-gradient(135deg,#f0f4ff,#e8edf8);border-radius:10px;padding:12px 16px;border-left:4px solid #003087}
-.stat-val{font-size:24px;font-weight:700;color:#003087}
-.stat-lbl{font-size:11px;color:#667;margin-top:2px;font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0.9rem 1rem}
+.stat{background:linear-gradient(135deg,#f0f4ff,#e8edf8);border-radius:10px;padding:10px 12px;border-left:4px solid #003087}
+.stat-val{font-size:20px;font-weight:700;color:#003087}
+.stat-lbl{font-size:10px;color:#667;margin-top:1px;font-weight:500}
 .stat.gold{background:linear-gradient(135deg,#fdf8ec,#f5edd4);border-left:4px solid #C8A951}
 .stat.gold .stat-val{color:#8a6d00}
 
-/* TABLE */
-.table-wrap{margin:0 1.25rem 1.25rem;border-radius:10px;border:1.5px solid #e8eaf2;overflow:hidden}
-table{width:100%;border-collapse:collapse;font-size:12.5px;table-layout:fixed}
+/* TABLA CON SCROLL HORIZONTAL EN MÓVIL */
+.table-wrap{margin:0 1rem 1rem;border-radius:10px;border:1.5px solid #e8eaf2;overflow:hidden}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.scroll-hint{display:none;text-align:center;font-size:11px;color:#C8A951;padding:4px;background:#fdf8ec;border-bottom:1px solid #f0e8c8}
+@media(max-width:700px){
+  .scroll-hint{display:block}
+  .inst-divider{display:none}
+  .inst-text h1{display:none}
+  .inst-text h2{font-size:14px}
+  select{max-width:140px}
+}
+table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:600px}
 thead{background:linear-gradient(135deg,#002570,#003087)}
-thead th{padding:11px 14px;text-align:left;font-weight:600;font-size:11px;color:rgba(255,255,255,0.85);cursor:pointer;user-select:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0.3px}
+thead th{padding:10px 13px;text-align:left;font-weight:600;font-size:11px;color:rgba(255,255,255,0.85);cursor:pointer;user-select:none;white-space:nowrap;letter-spacing:0.3px}
 thead th:hover{color:#C8A951}
 thead th.active-sort{color:#C8A951}
 tbody tr{border-bottom:1px solid #f0f2f8}
 tbody tr:last-child{border-bottom:none}
 tbody tr:hover{background:#f4f7ff}
-tbody td{padding:10px 14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+tbody td{padding:10px 13px;white-space:nowrap}
 
-/* BADGES LABORATORIO */
-.badge{display:inline-block;padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;letter-spacing:0.2px}
+.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10.5px;font-weight:600}
 .b-bio{background:#d1fae5;color:#065f46}.b-inv{background:#dbeafe;color:#1e3a8a}
 .b-fis{background:#ede9fe;color:#4c1d95}.b-ele{background:#fef3c7;color:#78350f}
 .b-ana{background:#fee2e2;color:#991b1b}.b-3d{background:#fce7f3;color:#831843}
 .b-mic{background:#ccfbf1;color:#134e4a}.b-ali{background:#f0fdf4;color:#166534}
 .b-mec{background:#fecaca;color:#7f1d1d}.b-pro{background:#e0f2fe;color:#075985}
 
-/* ENLACE */
-.link-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;font-size:11px;border:1.5px solid #003087;border-radius:7px;background:#fff;color:#003087;text-decoration:none;font-weight:600;transition:all 0.15s}
+.link-btn{display:inline-flex;align-items:center;gap:4px;padding:5px 11px;font-size:11px;border:1.5px solid #003087;border-radius:7px;background:#fff;color:#003087;text-decoration:none;font-weight:600}
 .link-btn:hover{background:#003087;color:#fff}
 .no-link{font-size:11px;color:#bbb;font-style:italic}
 
-/* ESTADO */
-.loading{text-align:center;padding:3.5rem;color:#888;font-size:14px}
-.spinner{display:inline-block;width:28px;height:28px;border:3px solid #e0e4f0;border-top:3px solid #003087;border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:12px}
+.loading{text-align:center;padding:3rem;color:#888;font-size:14px}
+.spinner{display:inline-block;width:28px;height:28px;border:3px solid #e0e4f0;border-top:3px solid #003087;border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:10px}
 @keyframes spin{to{transform:rotate(360deg)}}
-.error-msg{margin:1rem 1.25rem;padding:1rem 1.25rem;color:#991b1b;font-size:13px;background:#fee2e2;border-radius:10px;border-left:4px solid #991b1b}
-.empty{text-align:center;padding:3rem;color:#888;font-size:14px}
+.error-msg{margin:1rem;padding:1rem;color:#991b1b;font-size:13px;background:#fee2e2;border-radius:10px;border-left:4px solid #991b1b}
+.empty{text-align:center;padding:3rem;color:#888;font-size:14px;min-width:unset}
 
-/* PAGINACIÓN */
-.pag-bar{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#f8f9fc;border-top:1.5px solid #e8eaf2;font-size:12px;color:#888;flex-wrap:wrap;gap:8px}
-.pag-btns{display:flex;gap:4px}
+.pag-bar{display:flex;align-items:center;justify-content:space-between;padding:9px 13px;background:#f8f9fc;border-top:1.5px solid #e8eaf2;font-size:11px;color:#888;flex-wrap:wrap;gap:6px}
+.pag-btns{display:flex;gap:3px;flex-wrap:wrap}
 .pb{padding:5px 10px;border:1.5px solid #dde2f0;border-radius:7px;background:#fff;cursor:pointer;font-size:12px;color:#003087;font-weight:500}
 .pb:hover:not(:disabled){background:#003087;color:#fff;border-color:#003087}
 .pb:disabled{opacity:0.3;cursor:default}
 .pb.on{background:#003087;color:#fff;border-color:#003087}
 
-/* FOOTER */
-.footer{text-align:center;padding:1.2rem;font-size:11px;color:#999;margin-top:0.5rem}
+.footer{text-align:center;padding:1rem;font-size:11px;color:#999;margin-top:0.5rem}
 .footer span{color:#C8A951;font-weight:600}
-.last-update{font-size:11px;color:#aaa;padding:0 1.25rem 1rem;text-align:right}
+.last-update{font-size:11px;color:#aaa;padding:0 1rem 0.75rem;text-align:right}
 </style>
 </head>
 <body>
 
-<!-- HEADER INSTITUCIONAL -->
 <div class="inst-header">
   <div class="inst-header-inner">
     <div class="logo-circle">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Escudo_UCB.png/240px-Escudo_UCB.png" 
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Escudo_UCB.png/240px-Escudo_UCB.png"
            alt="Escudo UCB"
-           onerror="this.style.display='none';this.parentNode.innerHTML='<span style=font-size:28px;color:#003087>✟</span>'">
+           onerror="this.style.display='none';this.parentNode.innerHTML='<span style=font-size:24px;color:#003087>✟</span>'">
     </div>
     <div class="inst-divider"></div>
     <div class="inst-text">
@@ -121,34 +116,32 @@ tbody td{padding:10px 14px;overflow:hidden;text-overflow:ellipsis;white-space:no
 <div class="container">
   <div class="card">
     <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('fis',this)">
-        <span class="tab-icon">📚</span> Manuales Físicos
-      </button>
-      <button class="tab-btn" onclick="switchTab('dig',this)">
-        <span class="tab-icon">💻</span> Manuales Digitales
-      </button>
+      <button class="tab-btn active" onclick="switchTab('fis',this)">📚 Manuales Físicos</button>
+      <button class="tab-btn" onclick="switchTab('dig',this)">💻 Manuales Digitales</button>
     </div>
 
     <div class="search-area">
       <div class="search-row">
         <div class="sbox">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          <input type="text" id="q" placeholder="Buscar por código, equipo, nombre del manual, marca...">
+          <input type="text" id="q" placeholder="Buscar código, equipo, marca...">
         </div>
         <select id="f-lab"><option value="">Todos los laboratorios</option></select>
+      </div>
+      <div class="btn-row" style="margin-bottom:0.5rem">
         <button class="clear-btn" onclick="clearF()">✕ Limpiar</button>
         <button class="reload-btn" onclick="loadData()">↻ Actualizar</button>
       </div>
     </div>
 
     <div class="stats">
-      <div class="stat"><div class="stat-val" id="s-total">—</div><div class="stat-lbl">Resultados encontrados</div></div>
+      <div class="stat"><div class="stat-val" id="s-total">—</div><div class="stat-lbl">Resultados</div></div>
       <div class="stat"><div class="stat-val" id="s-labs">—</div><div class="stat-lbl">Laboratorios</div></div>
       <div class="stat gold"><div class="stat-val" id="s-extra">—</div><div class="stat-lbl" id="s-extra-lbl">Manuales</div></div>
     </div>
 
     <div id="main-area">
-      <div class="loading"><div class="spinner"></div><br>Cargando datos desde Google Sheets...</div>
+      <div class="loading"><div class="spinner"></div><br>Cargando datos...</div>
     </div>
     <div class="last-update">Última actualización: <span id="last-upd">—</span></div>
   </div>
@@ -159,12 +152,11 @@ tbody td{padding:10px 14px;overflow:hidden;text-overflow:ellipsis;white-space:no
 </div>
 
 <script>
-const URL_FIS = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzpqmRkFyP0mcNo6BWZdkovOV-s4OgeL_FhsYvpRrMWelfwF8UMpNh-eCnybunnppe6MirYUJZIZon/pub?output=csv&gid=135612474";
-const URL_DIG = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzpqmRkFyP0mcNo6BWZdkovOV-s4OgeL_FhsYvpRrMWelfwF8UMpNh-eCnybunnppe6MirYUJZIZon/pub?output=csv&gid=275856402";
-const LABS_COLOR = {'Biotecnologia':'b-bio','Investigacion':'b-inv','Fisica':'b-fis','Electronica':'b-ele','Analitica':'b-ana','3D y Prototipado':'b-3d','Microscopia':'b-mic','Alimentos':'b-ali','Mecanizado y Manufactura':'b-mec','Procesos y Hidraulica':'b-pro'};
-let DATA={'fis':[],'dig':[]}, curTab='fis', filtered=[], sKey='', sDir=1, pg=1, perPg=12;
+const URL_FIS="https://docs.google.com/spreadsheets/d/e/2PACX-1vRzpqmRkFyP0mcNo6BWZdkovOV-s4OgeL_FhsYvpRrMWelfwF8UMpNh-eCnybunnppe6MirYUJZIZon/pub?output=csv&gid=135612474",URL_DIG="https://docs.google.com/spreadsheets/d/e/2PACX-1vRzpqmRkFyP0mcNo6BWZdkovOV-s4OgeL_FhsYvpRrMWelfwF8UMpNh-eCnybunnppe6MirYUJZIZon/pub?output=csv&gid=275856402";
+const LC={'Biotecnologia':'b-bio','Investigacion':'b-inv','Fisica':'b-fis','Electronica':'b-ele','Analitica':'b-ana','3D y Prototipado':'b-3d','Microscopia':'b-mic','Alimentos':'b-ali','Mecanizado y Manufactura':'b-mec','Procesos y Hidraulica':'b-pro'};
+let DATA={'fis':[],'dig':[]},curTab='fis',filtered=[],sKey='',sDir=1,pg=1,perPg=12;
 
-document.getElementById('q').addEventListener('input', render);
+document.getElementById('q').addEventListener('input',render);
 
 function parseCSV(text){
   const lines=text.split('\n').map(l=>l.trim()).filter(l=>l);
@@ -187,35 +179,37 @@ function splitCSV(line){
 }
 
 async function loadData(){
-  document.getElementById('main-area').innerHTML='<div class="loading"><div class="spinner"></div><br>Cargando datos desde Google Sheets...</div>';
+  document.getElementById('main-area').innerHTML='<div class="loading"><div class="spinner"></div><br>Cargando datos...</div>';
   try{
     const [rF,rD]=await Promise.all([fetch(URL_FIS+'&t='+Date.now()),fetch(URL_DIG+'&t='+Date.now())]);
     if(!rF.ok||!rD.ok)throw new Error('Error de red');
     const [tF,tD]=await Promise.all([rF.text(),rD.text()]);
-    DATA.fis=parseCSV(tF); DATA.dig=parseCSV(tD);
+    DATA.fis=parseCSV(tF);DATA.dig=parseCSV(tD);
     document.getElementById('last-upd').textContent=new Date().toLocaleString('es-BO');
-    buildTable(); buildLabs(); render();
+    buildTable();buildLabs();render();
   }catch(e){
-    document.getElementById('main-area').innerHTML=`<div class="error-msg">⚠️ No se pudieron cargar los datos.<br><small>${e.message}</small><br><br><button class="reload-btn" onclick="loadData()" style="margin-top:8px">↻ Reintentar</button></div>`;
+    document.getElementById('main-area').innerHTML=`<div class="error-msg">⚠️ No se pudieron cargar los datos.<br><small>${e.message}</small><br><br><button class="reload-btn" onclick="loadData()" style="margin-top:8px;display:inline-block">↻ Reintentar</button></div>`;
   }
 }
 
 function buildTable(){
   const isFis=curTab==='fis';
   const cols=isFis
-    ?`<th style="width:13%" onclick="sortBy('codigo')">Código</th><th style="width:18%" onclick="sortBy('laboratorio')">Laboratorio</th><th style="width:12%" onclick="sortBy('marca')">Marca</th><th style="width:30%" onclick="sortBy('nombre')">Nombre del manual</th><th style="width:27%" onclick="sortBy('equipo')">Equipo</th>`
-    :`<th style="width:13%" onclick="sortBy('codigo')">Código</th><th style="width:16%" onclick="sortBy('laboratorio')">Laboratorio</th><th style="width:11%" onclick="sortBy('marca')">Marca</th><th style="width:25%" onclick="sortBy('nombre')">Nombre del manual</th><th style="width:21%" onclick="sortBy('equipo')">Equipo</th><th style="width:14%">Enlace Drive</th>`;
+    ?`<th onclick="sortBy('codigo')">Código</th><th onclick="sortBy('laboratorio')">Laboratorio</th><th onclick="sortBy('marca')">Marca</th><th onclick="sortBy('nombre')">Nombre del manual</th><th onclick="sortBy('equipo')">Equipo</th>`
+    :`<th onclick="sortBy('codigo')">Código</th><th onclick="sortBy('laboratorio')">Laboratorio</th><th onclick="sortBy('marca')">Marca</th><th onclick="sortBy('nombre')">Nombre del manual</th><th onclick="sortBy('equipo')">Equipo</th><th>Enlace Drive</th>`;
   document.getElementById('main-area').innerHTML=`
     <div class="table-wrap">
-      <table><thead><tr id="thead-row">${cols}</tr></thead><tbody id="tbody"></tbody></table>
+      <div class="scroll-hint">← Desliza para ver más →</div>
+      <div class="table-scroll">
+        <table><thead><tr id="thead-row">${cols}</tr></thead><tbody id="tbody"></tbody></table>
+      </div>
       <div class="pag-bar"><span id="pag-info"></span><div class="pag-btns" id="pag-btns"></div></div>
     </div>`;
 }
 
 function buildLabs(){
   const labs=[...new Set(DATA[curTab].map(r=>r.laboratorio).filter(Boolean))].sort();
-  const sel=document.getElementById('f-lab');
-  sel.innerHTML='<option value="">Todos los laboratorios</option>'+labs.map(l=>`<option>${l}</option>`).join('');
+  document.getElementById('f-lab').innerHTML='<option value="">Todos los laboratorios</option>'+labs.map(l=>`<option>${l}</option>`).join('');
 }
 
 function switchTab(t,btn){
@@ -234,7 +228,7 @@ function render(){
   const fLab=document.getElementById('f-lab').value;
   filtered=DATA[curTab].filter(r=>{
     if(fLab&&r.laboratorio!==fLab)return false;
-    if(q){const h=[r.codigo,r.laboratorio,r.marca,r.nombre,r.equipo,r.descripcion].join(' ').toLowerCase();if(!h.includes(q))return false;}
+    if(q){if(![r.codigo,r.laboratorio,r.marca,r.nombre,r.equipo,r.descripcion].join(' ').toLowerCase().includes(q))return false;}
     return true;
   });
   if(sKey)filtered.sort((a,b)=>{const av=a[sKey]||'',bv=b[sKey]||'';return av<bv?-sDir:av>bv?sDir:0;});
@@ -245,25 +239,25 @@ function render(){
     const cl=filtered.filter(r=>r.enlace&&r.enlace.startsWith('http')).length;
     document.getElementById('s-extra').textContent=cl;
     document.getElementById('s-extra-lbl').textContent='Con enlace Drive';
-  }else{document.getElementById('s-extra').textContent=filtered.length;document.getElementById('s-extra-lbl').textContent='Físicos registrados';}
-  
-  // Update sort headers
+  }else{
+    document.getElementById('s-extra').textContent=filtered.length;
+    document.getElementById('s-extra-lbl').textContent='Físicos registrados';
+  }
   document.querySelectorAll('#thead-row th').forEach(th=>{
     const fn=th.getAttribute('onclick');if(!fn)return;
     const k=fn.match(/'(\w+)'/)?.[1];if(!k)return;
-    const base={codigo:'Código',laboratorio:'Laboratorio',marca:'Marca',nombre:'Nombre del manual',equipo:'Equipo'}[k]||k;
-    th.textContent=base+(sKey===k?(sDir===1?' ▲':' ▼'):' ⇅');
+    const label={codigo:'Código',laboratorio:'Laboratorio',marca:'Marca',nombre:'Nombre del manual',equipo:'Equipo'}[k]||k;
+    th.textContent=label+(sKey===k?(sDir===1?' ▲':' ▼'):' ⇅');
     th.classList.toggle('active-sort',sKey===k);
   });
-
   const pages=Math.max(1,Math.ceil(filtered.length/perPg));
   if(pg>pages)pg=1;
   const slice=filtered.slice((pg-1)*perPg,pg*perPg);
   const isFis=curTab==='fis';
-  if(!slice.length){tb.innerHTML=`<tr><td colspan="${isFis?5:6}" class="empty">🔍 Sin resultados para esta búsqueda</td></tr>`;renderPag(pages);return;}
+  if(!slice.length){tb.innerHTML=`<tr><td colspan="${isFis?5:6}" class="empty">🔍 Sin resultados</td></tr>`;renderPag(pages);return;}
   tb.innerHTML=slice.map(r=>{
-    const bc=LABS_COLOR[r.laboratorio]||'b-ali';
-    const base=`<td title="${r.codigo}" style="font-weight:700;font-size:11.5px;color:#003087">${r.codigo}</td><td><span class="badge ${bc}">${r.laboratorio}</span></td><td title="${r.marca}" style="color:#666">${r.marca}</td><td title="${r.nombre}">${r.nombre}</td><td title="${r.equipo}" style="color:#555">${r.equipo}</td>`;
+    const bc=LC[r.laboratorio]||'b-ali';
+    const base=`<td style="font-weight:700;font-size:11.5px;color:#003087">${r.codigo}</td><td><span class="badge ${bc}">${r.laboratorio}</span></td><td style="color:#666">${r.marca}</td><td title="${r.nombre}">${r.nombre}</td><td style="color:#555">${r.equipo}</td>`;
     if(isFis)return`<tr>${base}</tr>`;
     const lc=r.enlace&&r.enlace.startsWith('http')?`<a href="${r.enlace}" class="link-btn" target="_blank">🔗 Ver PDF</a>`:`<span class="no-link">Pendiente</span>`;
     return`<tr>${base}<td>${lc}</td></tr>`;
@@ -274,9 +268,9 @@ function render(){
 function renderPag(pages){
   const pb=document.getElementById('pag-btns');if(!pb)return;
   const s=(pg-1)*perPg+1,e=Math.min(pg*perPg,filtered.length);
-  document.getElementById('pag-info').textContent=filtered.length?`${s}–${e} de ${filtered.length} resultados`:'';
+  document.getElementById('pag-info').textContent=filtered.length?`${s}–${e} de ${filtered.length}`:'';
   let h=`<button class="pb" onclick="goPg(${pg-1})" ${pg===1?'disabled':''}>‹</button>`;
-  for(let i=1;i<=pages;i++){if(pages>7&&i>2&&i<pages-1&&Math.abs(i-pg)>1){if(i===3||i===pages-2)h+='<span style="padding:4px 3px;color:#aaa">…</span>';continue;}h+=`<button class="pb ${i===pg?'on':''}" onclick="goPg(${i})">${i}</button>`;}
+  for(let i=1;i<=pages;i++){if(pages>7&&i>2&&i<pages-1&&Math.abs(i-pg)>1){if(i===3||i===pages-2)h+='<span style="padding:3px;color:#aaa">…</span>';continue;}h+=`<button class="pb ${i===pg?'on':''}" onclick="goPg(${i})">${i}</button>`;}
   h+=`<button class="pb" onclick="goPg(${pg+1})" ${pg===pages?'disabled':''}>›</button>`;
   pb.innerHTML=h;
 }
